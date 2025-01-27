@@ -1,0 +1,367 @@
+@charset "UTF-8";
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: rgb(30, 135, 176);
+}
+
+.logo img {
+    width: 70px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    color: #f1c40f;
+}
+
+/* Background Section Styles */
+.Background {
+    width: 97%;
+    height: 90vh;
+    background-image: url('https://thumbs.dreamstime.com/z/hostel-room-interior-people-inside-illustration-hostel-room-interior-people-inside-people-sitting-bed-125841639.jpg?ct=jpeg');
+    /* background-position: center; */
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(30, 135, 176);
+    position: relative;
+    padding: 20px;
+}
+.Background img{
+    width: 100%;
+}
+.Background .Background-content {
+    margin-bottom: 40px; /* Space between Background-content and login cards */
+    animation: enlarge 3s ease-in-out infinite; /* Animation for enlarging */
+}
+ 
+.Background .Background-content h1 {
+    /* font-size: 24px;  Increased size for larger text 
+    margin: 0;
+    padding: 20px; */
+    font-size: 82px !important; /* Ensures 2em is applied */
+    
+}
+h1{
+    font-size: 82px;
+}
+p{
+    font-size: 40px;
+}
+
+.Background .Background-content p {
+    font-size: 25px;
+    margin: 10px 0 0;
+    font-weight: bold;
+}
+
+/* Keyframe Animation for Enlarging */
+@keyframes enlarge {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Scales up the element */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Horizontal Login Cards */
+
+
+.login-cards{
+	display: flex;
+    flex-direction: row; /* Aligns the login cards horizontally */
+    gap: 20px;
+    padding: 40px; /* Adjusted padding */
+    
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    height: 100px;
+    /*margin: 20px; */
+    padding-bottom: 8%;
+    margin-bottom:100px;
+}
+.login-cards i{
+    color: rgb(30, 135, 176);
+    font-size: 50px;
+}
+
+.login-cards h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.login-cards a {
+    padding: 10px 20px;
+    background-color: rgb(30, 135, 176);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.login-cards a:hover {
+    background-color: #f1c40f;
+}
+
+/* Services Section Styles */
+.services {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.services h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increase shadow intensity */
+}
+
+.card img {
+    width: 80%;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* About Us Section Styles */
+.about-us {
+    height: 60vh;
+    background-image: url('https://image3.jdomni.in/banner/15092022/DE/58/E7/D9E827FEF719568C96B1F233ED_1663219142308.jpeg?output-format=webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.about-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay on background image */
+}
+
+.about-content {
+    z-index: 1;
+    padding: 20px;
+}
+
+.about-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 18px;
+    max-width: 600px;
+}
+/* Contact Us Section Styles */
+.contact-us {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact-us h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.contact-us .contact-box {
+    display: flex;
+    justify-content: space-between; /* Distribute the items evenly with space between them */
+    flex-wrap: wrap; /* Allows wrapping to a new row if the width is too small */
+    gap: 20px; /* Add some space between the items */
+    
+}
+
+.contain {
+    flex: 1; /* Allow each .contain to take equal space */
+    text-align: center;
+    padding: 10px;
+    min-width: 300px; /* Ensure a minimum width for each box */
+    border: 1px solid #ccc; /* Optional: Add border for better visibility */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+.contact-box i {
+    font-size: 60px; /* Icon size */
+    margin-bottom: 10px;
+    color: rgb(30, 135, 176);
+}
+.contact-box p{
+    font-size: 25px;
+}
+.contact-box h4{
+    font-size: 20px;
+}
+
+.contact-us h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.contact-us form {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+form {
+    height: auto;
+    padding-top: 20px;
+}
+.form-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.form-group {
+    flex: 1;
+    margin-right: 20px;
+}
+.form-row .form-group:last-child {
+    margin-right: 0; /* Removes margin from the last form-group */
+}
+
+.form-group label {
+    display: block;
+    /* font-size: 18px; */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(30, 135, 176);
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+button[type="submit"] {
+    
+    width: 40%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: rgb(30, 135, 176); /* Button background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Adds space between message and button */
+}
+
+button[type="submit"]:hover {
+    background-color: #f1c40f; /* Darker blue on hover */
+}
+
+/* button:hover {
+    background-color: #f1c40f;
+} */
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    height: 50px;
+    background: rgb(30, 135, 176);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer p{
+    font-size: medium;
+}

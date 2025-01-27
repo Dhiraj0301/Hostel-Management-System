@@ -1,0 +1,481 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, rgb(2, 108, 150), white);
+  /* background: white; */
+}
+
+.header {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  background-color:rgb(213, 225, 229);
+  color: black;
+  box-shadow: 0px 0px 20px rgba(16, 17, 17, 0.5);
+}
+
+.header-logo {
+  font-size: 25px;
+  padding: 0 6%;
+}
+.header .header-anchor {
+  margin: 0 6%;
+  width: 70px;
+  /* border: 2px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  /* background-color: white; */
+  background-color: transparent;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+.header i{
+	color:rgb(30, 135, 176);
+}
+.header .header-anchor a{
+  text-decoration: none;
+  padding: 8px 20px;
+  background: rgb(30, 135, 176);
+  color: rgb(193, 193, 217);
+  border-radius: 4px;
+
+}
+.header .header-anchor a:link{
+  text-decoration: none;
+  color: white;
+}
+.header .header-anchor a:hover{
+  /* color: red; */
+  color:red;
+}
+.form {
+margin: 50px auto;
+width: 400px;
+height: 350px;
+background: rgb(30, 135, 176);
+border-radius: 5px;
+box-shadow: 0px 0px 20px rgba(16, 17, 17, 0.5);
+overflow: hidden;
+transition: all ease-in 0.4s;
+
+}
+
+.form:hover {
+transform: scale(1.1);
+}
+
+.form .title {
+width: 100%;
+background: skyblue;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 60px;
+
+}
+
+.form .form-field {
+width: 100%;
+margin: 20px 0px;
+padding: 5px 20px;
+/* text-align: center; */
+margin: 10px;
+}
+
+.form .form-field ul {
+list-style-position: inside;
+list-style-type: square;
+
+}
+.form .form-field a{
+ cursor: pointer;
+ text-decoration: none;
+ color: white;
+ font-size: 20px;
+}
+
+.form .form-field a:link {
+color: red;
+}
+
+/* visited link */
+.form .form-field a:visited {
+color: blue ;
+}
+
+/* mouse over link */
+.form .form-field a:hover {
+color: hotpink;
+text-decoration: underline;
+}
+
+/* selected link */
+.form .form-field a:active {
+/* color: blue; */
+text-decoration: underline;
+}
+
+.gallery {
+  width: 100%;
+  height: 300px;
+  /* border: 4px solid red; */
+  background-color: black;
+   
+}
+
+.gallery-title {
+  font-size: 15px;
+  padding: 5px 6%;
+  height: 40px;
+  background-color:rgb(30, 135, 176);
+  color: white;
+ 
+}
+
+.gallery .gallery-box {
+  width: 100%;
+  height: 255px;
+  /* border: 4px solid yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Change to flex-start for proper sliding */
+  overflow-x: hidden; /* Hide the overflow */
+  position: relative;
+  background: transparent;
+}
+
+.gallery .gallery-box .inner-gallery {
+  min-width: 200px; 
+  height: 200px;
+  border-radius: 5px;
+  /* border: 2px solid black; */
+  margin-right: 15px;
+  margin-left: 15px;
+  background-image: url('https://tse3.mm.bing.net/th?id=OIP.NP8ZE9qxC4rg0ksySNomOgHaE7&pid=Api&P=0&h=180');
+  background-repeat: no-repeat;
+  background-position:center;
+  background-color: black;  
+  box-shadow: 0px 0px 20px rgba(116, 226, 226, 0.5);
+
+}
+@keyframes slide {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-600px); } 
+  50% { transform: translateX(-1200px); } 
+  75% { transform: translateX(-1250px); } 
+  100% { transform: translateX(0); }
+}
+.gallery .gallery-box .inner-gallery {
+  animation: slide 16s infinite; 
+}
+
+footer{
+  height: 25px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 450px;
+ 
+}
+/* Form container div */
+.form-container {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+background-color:white;
+border: 2px solid #ccc;
+padding: 20px;
+z-index: 10;
+display: none; 
+margin:auto;
+width: 500px;
+height: 400px; 
+overflow-y: scroll;
+overflow-x: hidden;
+box-shadow: #070d12;
+border-radius: 10px;
+box-shadow: 0px 0px 20px rgba(16, 17, 17, 0.5);
+
+} 
+.payment-img img{
+	object-fit:cover;
+}
+/* Form displayed when active */
+.form-container.active {
+display: block;
+}
+
+
+.students-detail ,
+.residential-address,
+.guardians-details,
+.guardians-verification,
+.tenants-documentation{
+display: grid;
+justify-items:start;
+padding: 20px;
+width: 350px; 
+margin-bottom: 20px;
+} 
+
+.item {
+position: relative;
+margin-top: 10px;
+margin-bottom: 5px;
+width: 100%;
+display: grid;
+justify-items: center;
+}
+.item-input{
+display: block;
+padding: 15px 10px;
+outline: none;
+border: 2px solid #070d12;
+width: 100%;
+font-size: 1rem;
+box-sizing: border-box;
+background-color: rgb(192, 224, 237);
+color: rgb(11, 11, 11);
+border-radius: 5px;
+outline: none;
+}
+input:focus {
+border: 2px solid #070d12;
+}
+.item-label {
+position: absolute;
+top: 8px;
+left: 8px;
+opacity:0;
+background-color:white;
+padding: 0 2px;
+text-transform: uppercase;
+font-size: 1rem;
+-webkit-transition: 0.2s ease-in-out;
+-o-transition: 0.2s ease-in-out;
+transition: 0.2s ease-in-out;
+border-left: 1px solid black;
+border-right: 1px solid black;
+}
+input:valid + label {
+opacity: 1;
+top:-8px;
+color: black;
+}
+input:focus + label {
+  color:black;
+} 
+
+/* Style for the select dropdown */
+.item select.item-input {
+  appearance: none; /* Remove default styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: rgb(192, 224, 237);
+  color: rgb(11, 11, 11);
+  border: 2px solid #070d12;
+  border-radius: 5px;
+  padding: 15px 10px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Add a custom arrow to the dropdown */
+.item select.item-input {
+  background-image: url('data:image/svg+xml;charset=US-ASCII, %3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"%3E%3Cpath fill="%23070712" d="M5 7L0 0h10L5 7z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 7px;
+  padding-right: 40px; /* Adjust padding to make space for the arrow */
+}
+
+/* Change border color on focus */
+.item select.item-input:focus {
+  border-color: #070d12;
+}
+
+/* Optional: Add transition for smoothness */
+.item select.item-input {
+  transition: border-color 0.3s ease;
+}
+
+.student-submit input[type="submit"] {
+  background-color: #7bc5f3; /* Green background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  padding: 10px 10px; /* Add some padding */
+  font-size: 10px; /* Increase font size */
+  font-weight: bold; /* Make the text bold */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Add a pointer on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  width: 30%; /* Make the button full width */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.student-submit input[type="submit"]:hover {
+  background-color: #0c7aba; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+
+
+.student-submit input[type="submit"]:active {
+  background-color: #1e697e; /* Even darker green when clicked */
+  transform: scale(1); /* Reset the scale when clicked */
+}
+
+
+
+
+
+
+
+
+.item-input-payment {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 10px; /* Adds spacing between items */
+  display: block;
+padding: 15px 10px;
+outline: none;
+border: 2px solid #070d12;
+width: 100%;
+font-size: 1rem;
+box-sizing: border-box;
+background-color: rgb(192, 224, 237);
+color: rgb(11, 11, 11);
+border-radius: 5px;
+outline: none;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically centers the label and checkbox */
+  width: 100%;
+}
+
+.checkbox-item label {
+  font-size: 20px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-left: 20px;
+}
+
+.student-submit {
+  margin-top: 20px;
+}
+
+.student-submit input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.student-submit input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Preview Section Styling */
+.preview-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Preview Block Styling */
+.preview-block {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.preview-block h4 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.preview-block p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.preview-block strong {
+  color: #000;
+}
+
+/* Submit Button Styling */
+.student-submit {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.student-submit input[type="submit" ] {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.student-submit input[type="submit"]:hover {
+  background-color: #0056b3;
+}

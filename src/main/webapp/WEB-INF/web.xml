@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xmlns="https://jakarta.ee/xml/ns/jakartaee" 
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" 
+         version="6.0">
+
+    <display-name>HostelManagementSystem</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <display-name>checkLogin1</display-name>
+        <servlet-name>checkLogin1</servlet-name>
+        <servlet-class>com.pqr.checkLogin1</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>checkLogin1</servlet-name>
+        <url-pattern>/checkLogin1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>AdminResponseServlet</display-name>
+        <servlet-name>AdminResponseServlet</servlet-name>
+        <servlet-class>com.pqr.AdminResponseServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminResponseServlet</servlet-name>
+        <url-pattern>/AdminResponseServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>SubmitRequestServlet</display-name>
+        <servlet-name>SubmitRequestServlet</servlet-name>
+        <servlet-class>com.pqr.SubmitRequestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SubmitRequestServlet</servlet-name>
+        <url-pattern>/SubmitRequestServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>HostelFormServlet</servlet-name>
+    	<servlet-class>com.pqr.HostelFormServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>HostelFormServlet</servlet-name>
+    	<url-pattern>/HostelFormServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>
+</element>
